@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "name": "Swatch",
+      "price": 4300,
+      "quantity": 600,
+      "selected": true,
+      "available": false
+    }
+  ]
+}
