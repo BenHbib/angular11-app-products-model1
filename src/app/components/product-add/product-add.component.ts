@@ -12,6 +12,8 @@ export class ProductAddComponent implements OnInit {
   // If we remove the ?
   // productFormGroup: FormGroup | null = null
 
+  submitted: boolean = false;
+
   constructor(
     private fb: FormBuilder,
     private productService: ProductsService
@@ -28,6 +30,10 @@ export class ProductAddComponent implements OnInit {
   }
 
   onSaveProduct() {
-    this.productService.save(this.productFormGroup?.value);
+    this.submitted = true;
+    if (this.productFormGroup?.invalid) return;
+    this.productService.save(this.productFormGroup?.value).subscribe((data) => {
+      alert('Success Saving product');
+    });
   }
 }

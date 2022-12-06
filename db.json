@@ -5,8 +5,40 @@
       "name": "Swatch",
       "price": 4300,
       "quantity": 600,
+      "selected": false,
+      "available": false
+    },
+    {
+      "id": 4,
+      "name": "Swatch",
+      "price": 4300,
+      "quantity": 600,
       "selected": true,
       "available": false
+    },
+    {
+      "id": 4,
+      "name": "Swatch",
+      "price": 4300,
+      "quantity": 600,
+      "selected": true,
+      "available": false
+    },
+    {
+      "name": "Hiiii",
+      "price": "10",
+      "quantity": "11",
+      "selected": false,
+      "available": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "ppppoooo",
+      "price": "20",
+      "quantity": "22",
+      "selected": false,
+      "available": true
     }
   ]
 }
