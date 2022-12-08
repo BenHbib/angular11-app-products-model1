@@ -28,7 +28,7 @@
       "name": "Hiiii",
       "price": "10",
       "quantity": "11",
-      "selected": true,
+      "selected": false,
       "available": false,
       "id": 5
     },

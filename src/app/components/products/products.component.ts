@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
+import { EventDriverService } from '../../state/event.driver.service';
 import { ProductsService } from 'src/app/services/products.service';
 import {
   ActionEvent,
@@ -23,10 +24,18 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    // Injecter le service dans le constructeur
+    private eventDrivenService: EventDriverService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.eventDrivenService.sourceEventSubjectObservable.subscribe(
+      (actionEvent: ActionEvent) => {
+        this.onActionEvent(actionEvent);
+      }
+    );
+  }
 
   onGetAllProducts() {
     // this.productsService.getAllProducts().subscribe(
